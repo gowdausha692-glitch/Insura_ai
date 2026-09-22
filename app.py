@@ -187,7 +187,7 @@ p, li, label, .stMarkdown {{ color:{T['text']}; }}
 }}
 
 /* ---------------- masthead ---------------- */
-.masthead {{display:flex;align-items:center;gap:16px;margin-bottom:26px;}}
+.masthead {{display:flex;align-items:center;gap:16px;margin-bottom:5px;}}
 .masthead .crest {{flex:none;}}
 .masthead .name {{
     font-family:'Fraunces',Georgia,serif;
@@ -196,12 +196,12 @@ p, li, label, .stMarkdown {{ color:{T['text']}; }}
 }}
 .masthead .tag {{
     color:{T['muted']};font-size:19px;font-weight:600;
-    margin-top:10px;max-width:65ch;line-height:1.5;
+    margin-top:5px;max-width:65ch;line-height:1.5;
 }}
-.hero {{margin-top:45px;margin-bottom:35px;}}
+.hero {{margin-top:0;margin-bottom:20px;}}
 .hero h1 {{font-family:'Fraunces',Georgia,serif;font-size:64px;font-weight:800;line-height:1.05;letter-spacing:-2px;color:{T['ink']};margin:0;}}
 .hero h1 span {{color:{T['teal']};}}
-.hero p {{color:{T['muted']};font-size:21px;font-weight:500;line-height:1.6;max-width:720px;margin-top:22px;}}
+.hero p {{color:{T['muted']};font-size:21px;font-weight:500;line-height:1.6;max-width:720px;margin-top:12px;}}
 
 /* ---------------- surfaces ---------------- */
 .section {{ font-family:'Fraunces',Georgia,serif; font-size:26px; font-weight:600;
