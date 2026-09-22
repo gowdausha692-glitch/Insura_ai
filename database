@@ -1,0 +1,11 @@
+import mysql.connector
+
+db = mysql.connector.connect(
+    host="localhost",
+    port=3306,
+    user="root",
+    password="YOUR_MYSQL_PASSWORD",
+    database="insuraai"
+)
+
+print("MySQL connected successfully!")
