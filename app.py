@@ -196,23 +196,17 @@ p, li, label, .stMarkdown {{ color:{T['text']}; }}
 }}
 
 /* ---------------- masthead ---------------- */
-.masthead .name {
-    font-family:'Fraunces', Georgia, serif;
-    font-size:58px;
-    font-weight:800;
-    color:{T['ink']};
-    line-height:1.0;
-    letter-spacing:-1.5px;
-}
-
-.masthead .tag {
-    color:{T['muted']};
-    font-size:19px;
-    font-weight:600;
-    margin-top:10px;
-    max-width:65ch;
-    line-height:1.5;
-}
+.masthead {{display:flex;align-items:center;gap:16px;margin-bottom:26px;}}
+.masthead .crest {{flex:none;}}
+.masthead .name {{
+    font-family:'Fraunces',Georgia,serif;
+    font-size:58px;font-weight:800;
+    color:{T['ink']};line-height:1;letter-spacing:-1.5px;
+}}
+.masthead .tag {{
+    color:{T['muted']};font-size:19px;font-weight:600;
+    margin-top:10px;max-width:65ch;line-height:1.5;
+}}
 
 /* ---------------- surfaces ---------------- */
 .section {{ font-family:'Fraunces',Georgia,serif; font-size:26px; font-weight:600;
