@@ -414,18 +414,26 @@ def predict_risk(row: pd.DataFrame):
 
 
 def factor_contributions(row: pd.DataFrame) -> pd.DataFrame:
-    """
-    How much each answer moves the estimate, measured by swapping that one
-    answer for the dataset median and re-predicting.
-    """
+   
     base = predict_expense(row)
     out = []
-    for f in FEATURES:
-        swapped = row.copy()
-        swapped.loc[:, f] = MEDIANS[f]
-        out.append({"Factor": LABELS[f], "Effect": base - predict_expense(swapped)})
-    return pd.DataFrame(out).sort_values("Effect")
 
+    for f in FEATURES:
+        # Convert to float so Pandas can safely assign median values
+        swapped = row.copy().astype(float)
+
+        # Replace one factor with its median value
+        swapped.loc[:, f] = float(MEDIANS[f])
+
+        # Calculate effect
+        new_prediction = predict_expense(swapped)
+
+        out.append({
+            "Factor": LABELS[f],
+            "Effect": base - new_prediction
+        })
+
+    return pd.DataFrame(out).sort_values("Effect")
 
 def coverage_for(expense: float) -> str:
     if expense < 50_000:
