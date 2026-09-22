@@ -25,7 +25,7 @@ from sklearn.preprocessing import LabelEncoder
 st.set_page_config(
     page_title="InsuraAI",
     page_icon="🛡️",
-    layout="justified",
+    layout="wide",
     initial_sidebar_state="expanded",
 )
 
