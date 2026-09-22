@@ -1,13 +1,4 @@
-"""
-InsuraAI — health cover planning for Indian families.
-
-Run with:
-    pip install streamlit pandas numpy plotly scikit-learn
-    streamlit run insuraai_app.py
-"""
-
 import io
-
 import numpy as np
 import pandas as pd
 import plotly.express as px
@@ -207,6 +198,10 @@ p, li, label, .stMarkdown {{ color:{T['text']}; }}
     color:{T['muted']};font-size:19px;font-weight:600;
     margin-top:10px;max-width:65ch;line-height:1.5;
 }}
+.hero {{margin-top:45px;margin-bottom:35px;}}
+.hero h1 {{font-family:'Fraunces',Georgia,serif;font-size:64px;font-weight:800;line-height:1.05;letter-spacing:-2px;color:{T['ink']};margin:0;}}
+.hero h1 span {{color:{T['teal']};}}
+.hero p {{color:{T['muted']};font-size:21px;font-weight:500;line-height:1.6;max-width:720px;margin-top:22px;}}
 
 /* ---------------- surfaces ---------------- */
 .section {{ font-family:'Fraunces',Georgia,serif; font-size:26px; font-weight:600;
@@ -706,7 +701,12 @@ st.markdown(
 """,
     unsafe_allow_html=True,
 )
-
+st.markdown("""
+<div class="hero">
+<h1>Know the bill <span>before</span> the<br>hospital does.</h1>
+<p>Describe your household once. See a year of likely medical spend, the sum insured that covers it, and exactly which answer moved the number.</p>
+</div>
+""", unsafe_allow_html=True)
 
 # ---------------------------------------------------------------------------
 # Overview
